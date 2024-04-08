@@ -1,0 +1,53 @@
+# form.jsp
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<h1>/jsp/0408/form.jsp</h1>
+
+<form action="pro.jsp">
+	이름 : <input type="text" name="name" /><br />
+	
+	선택 <br />
+	java <input type="checkbox" name="ch1" value="java" /><br />
+	jsp <input type="checkbox" name="ch2" value="jsp" /><br />	
+	frame <input type="checkbox" name="ch3" value="frame" /><br />	
+	C++ <input type="checkbox" name="ch4" value="C++" /><br />	
+	<br />
+	 <input type="submit" value="전송" />		
+	
+</form>
+
+
+# pro.jsp
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<h1>/jsp/0408/pro.jsp</h1>
+
+<%-- 체크 박스에서 선택한 것만 출력할 수 있도록함, 파라미터는 무조건 반환 요건이 스트링임 --%>
+
+<%
+	String name = request.getParameter("name");
+	String ch1 = request.getParameter("ch1");
+	String ch2 = request.getParameter("ch2");
+	String ch3 = request.getParameter("ch3");
+	String ch4 = request.getParameter("ch4");
+%>
+
+<h1>name: <%=name%></h1>
+<h1>ch1: <%=ch1%></h1>
+<h1>ch2: <%=ch2%></h1>
+<h1>ch3: <%=ch3%></h1>
+<h1>ch4: <%=ch4%></h1>
+
+
+	체크한 값만 출력되고 다른 값들은 null이 뜸
+	모두 체크 안 할 수도 있음.
+	그래서 if문으로 조건을 줘야함 > 공백처리 됨
+	근데 모든 체크박스에 이프문을 쓰기가 힘들다! 이때 쓰는 파라미터가 있음
+-------------------------
+	String ch1 = request.getParameter("ch1");
+	if(ch1 == null){
+		ch1=""; // ch1 값이 null 이면 빈 공백 처리
+	}
