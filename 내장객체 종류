@@ -28,6 +28,19 @@
             # sendRedirect(String url) : 지정된 url로 강제 이동
 
 
+@ application 객체 : 서비스의 실행 기간 동안 유지될 필요가 있는 속성값 설정
+            어느 브라우저에서든 사용할 수 있음 (가장 넓은 범위)
+
+            # setAttribute(String namme, Object value) : name 속성값을 value로 지정
+                                                반환 유형 : void
+            # getAttribute(String name) : name 속성값을 가져옴
+                                                반환 유형: Object
+            # removeAttribute(String name) : name 속성값을 삭제함
+                                                반환 유형: void
+            # getAttributeNames() : 모든 name 속성 이름을 가져옴
+                                                반환 유형: java.util.Enumeration
+            # getRealPath(String url) : 주어진 url이 매핑된 시스템상의 실제 경로를 가져옴
+                                                반환 유형: String
 
 
 
