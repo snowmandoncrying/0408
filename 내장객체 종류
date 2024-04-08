@@ -42,6 +42,26 @@
             # getRealPath(String url) : 주어진 url이 매핑된 시스템상의 실제 경로를 가져옴
                                                 반환 유형: String
 
+@ HTTP 프로토콜의 특징 : Connectionless 
+                        HTTP 메시지 간에 정보 (쿼리 스트링)가 공유되지 않음
+                        > 로그인 이후 다른 html 페이지에서 로그인 정보를 알기 어려움
+
+@ session 객체 : 이름- 값 형태의 데이터를 클라이언트 단위(IP주소 + Agent)로 세션테이블(HashMap)에 저장
+            데이터 유지 시간을 지정할 수 있다. (디폴트 값은 30분)
+
+            # setAttribute(String name, Object value) : name 속성값을 value로 지정
+                                    반환 유형: void
+            # getAttribute(String name) : name 속성값을 가져옴
+                                    반환 유형: Object
+            # removeAttribute(String name) : name 속성값을 삭제
+                                    반환 유형: void
+            # getAttributeNames() : 모든 name 속성 이름을 가져옴
+                                    반환 유형: java.util.Enumeration
+            # setMaxInactiveInterval(int sec) : 세션 유지 시간을 초 단위로 설정
+                                    반환 유형: void
+            # invalidate() : 세션 정보를 삭제
+                                    반환 유형: void
+                        
 
 
 
