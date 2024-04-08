@@ -1,0 +1,25 @@
+# parameter01.jsp
+		
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<h1>/jsp/0408/parameter01.jsp</h1>
+
+<h1>
+	<a href="parameter02.jsp?a=1&b=2">이동</a>   <%-- 물음표 뒤는 파라미터 값, & (앰퍼샌드)는 파라미터 값을 여러 개 보내겠다라는 뜻--%>
+											                         <%-- url을 통해 직접적으로 보내는 방법--%>
+</h1>
+
+<form action="parameter02.jsp">
+	<input type="submit" value="이동" />
+</form>
+
+
+# parameter02.jsp
+
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<h1>/jsp/0408/parameter02.jsp</h1>
+
+<h1>parameter : <%=request.getParameter("a") %></h1>
+<h1>parameter : <%=request.getParameter("b") %></h1>
