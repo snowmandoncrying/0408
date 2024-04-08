@@ -1,6 +1,6 @@
 
-@ request : HTTP 요청 메시지 정보를 제공
-            url을 분석하고 사용자의 파라미터를 처리하는 역할을 한다. (객체)
+@ request 객체: HTTP 요청 메시지 정보를 제공
+            url을 분석하고 사용자의 파라미터를 처리하는 역할을 한다.
             
             url 분석 : 개발자의 역할 중 가장 기본이다.
             사용자의 파라미터 처리 : 사용자가 요청한 것을 처리한다.
@@ -18,4 +18,34 @@
                                       반환 유형 - String []
 
    # getHeader(String name) : HTTP 요청 메시지 헤더에서 이름이 name인 속성값을 반환함
+
+
+@ response 객체: HTTP 응답 메시지의 헤더 처리
+            분석한 결과를 어떻게 보여줄까? > 보여줄 페이지를 결정한다. (반환 유형은 모두 void)
+                                                
+            # setContentType(String type) : HTTP 응답을 통해 반환될 페이지의 유형을 나타내는 MIME 타입 설정
+            # setCharacterEncoding(String charset) : 반환될 페이지의 문자 인코딩 방식을 지정해 반환
+            # sendRedirect(String url) : 지정된 url로 강제 이동
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
