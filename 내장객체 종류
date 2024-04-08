@@ -1,9 +1,21 @@
- @ request : HTTP 요청 메시지 정보를 제공
 
-    getParameter(String name) : 대표적으로 이용되는 함수이다.
+@ request : HTTP 요청 메시지 정보를 제공
+            url을 분석하고 사용자의 파라미터를 처리하는 역할을 한다. (객체)
+            
+            url 분석 : 개발자의 역할 중 가장 기본이다.
+            사용자의 파라미터 처리 : 사용자가 요청한 것을 처리한다.
+            꺼내서 가져올 땐 get() 메서드를 쓴다.
+
+            범위는 페이지에서 페이지로 이동한다. (jsp > jsp)
+            해당 페이지 내에서만 주고 받을 수 있다.
+        
+   # getParameter(String name) : 대표적으로 이용되는 함수이다.
                                 파라미터 리스트에서 이름이 name인 파라미터의 값을 반환한다.
                                 반환 유형 - String
 
-    getParameterValues(String name) : 파라미터 리스트에서 이름이 name인 파라미터가 여러 개일 경우,
+   # getParameterValues(String name) : 파라미터 리스트에서 이름이 name인 파라미터가 여러 개일 경우,
                                       해당 파라미터들의 값을 배열 형태로 반환한다.
                                       반환 유형 - String []
+
+   # getHeader(String name) : HTTP 요청 메시지 헤더에서 이름이 name인 속성값을 반환함
+
