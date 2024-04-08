@@ -15,3 +15,18 @@
   request.getRequestDispatcher("request02.jsp").forward(request, response);
  // request02.jsp 로 바로 이동 - 바로 넘어감 > 전에는 null이었던 request 값이 보임
   > request 값은 forward 되는 페이지에서만 받을 수 있기 때문이다.
+
+@ 세 가지는 범위의 차이
+
+	# request 단독실행하면 request 값은 null
+		request 값은 forward 한 페이지에서만 볼 수 있음
+
+	# session, application : 브라우저의 차이
+
+		session : 브라우저가 다르면 유지되지 않음
+			로그인 정보 : 세션으로 쓰고 있는 것임 - 따로따로 로그인 해야함
+			서버를 재실행하면 껐다 킨 것이니까 다 없어짐
+
+		application : 어디서든 볼 수 있음
+			여러 브라우저에서 쓸 수 있는 것
+			게임 로그인할 때 사용 > 기본적으로는 session 사용 (하나의 브라우저에서만 동작하도록)
